@@ -1,0 +1,45 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints
+
+# PyTorch / Transformers caches
+*.pt
+*.bin
+*.h5
+*.ckpt
+*.model
+*.cache
+*.index
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Dataset / images / large files
+csvs/
+dataset.csv
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
