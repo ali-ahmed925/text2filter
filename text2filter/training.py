@@ -44,7 +44,7 @@ class PhraseFilterDataset(Dataset):
         }
 
 class TwoHeadClassifier(nn.Module):
-    def __init__(self, transformer_name='sentence-transformers/paraphrase-mpnet-base-v2',
+    def __init__(self, transformer_name='sentence-transformers/all-MiniLM-L6-v2',
                  num_filters=12, num_intensities=3):
         super().__init__()
         self.transformer = AutoModel.from_pretrained(transformer_name)
@@ -67,7 +67,7 @@ def set_seed(seed=42):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-def train_model(dataset_csv, model_name='sentence-transformers/paraphrase-mpnet-base-v2',
+def train_model(dataset_csv, model_name='sentence-transformers/all-MiniLM-L6-v2',
                 batch_size=16, lr=2e-5, epochs=5, max_len=32,
                 save_path='twohead_model.pt'):
 

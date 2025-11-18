@@ -1,0 +1,110 @@
+{
+  "BilateralFilter": {
+    "library": "OpenCV",
+    "critical": true,
+    "intensity_mapping": {
+      "low":   { "d": 5, "sigmaColor": 25, "sigmaSpace": 25 },
+      "medium":{ "d": 9, "sigmaColor": 75, "sigmaSpace": 75 },
+      "strong":{ "d": 15, "sigmaColor": 150, "sigmaSpace": 150 }
+    }
+  },
+  "BoxBlurFilter": {
+    "library": "OpenCV",
+    "critical": false,
+    "intensity_mapping": {
+      "low":   { "ksize": [3, 3] },
+      "medium":{ "ksize": [5, 5] },
+      "strong":{ "ksize": [9, 9] }
+    }
+  },
+  "CartoonEffectFilter": {
+    "library": "Custom (OpenCV + edge detection)",
+    "critical": false,
+    "intensity_mapping": {
+      "low":   { "bilateral_d": 5, "sigmaColor": 25, "sigmaSpace": 25, "edges_ksize": 3 },
+      "medium":{ "bilateral_d": 9, "sigmaColor": 75, "sigmaSpace": 75, "edges_ksize": 5 },
+      "strong":{ "bilateral_d": 15, "sigmaColor": 150, "sigmaSpace": 150, "edges_ksize": 7 }
+    }
+  },
+  "GaussianFilter": {
+    "library": "OpenCV",
+    "critical": true,
+    "intensity_mapping": {
+      "low":   { "ksize": [3, 3], "sigmaX": 0.8 },
+      "medium":{ "ksize": [5, 5], "sigmaX": 1.5 },
+      "strong":{ "ksize": [9, 9], "sigmaX": 2.5 }
+    }
+  },
+  "GradientFilter": {
+    "library": "OpenCV",
+    "critical": false,
+    "intensity_mapping": {
+      "low":   { "ksize": 3 },
+      "medium":{ "ksize": 5 },
+      "strong":{ "ksize": 7 }
+    }
+  },
+  "HighBoostFilter": {
+    "library": "Custom (OpenCV)",
+    "critical": true,
+    "intensity_mapping": {
+      "low":   { "alpha": 1.2 },
+      "medium":{ "alpha": 1.8 },
+      "strong":{ "alpha": 2.5 }
+    }
+  },
+  "LaplacianSharpenFilter": {
+    "library": "OpenCV",
+    "critical": false,
+    "intensity_mapping": {
+      "low":   { "ksize": 1 },
+      "medium":{ "ksize": 3 },
+      "strong":{ "ksize": 5 }
+    }
+  },
+  "MedianFilter": {
+    "library": "OpenCV",
+    "critical": true,
+    "intensity_mapping": {
+      "low":   { "ksize": 3 },
+      "medium":{ "ksize": 5 },
+      "strong":{ "ksize": 7 }
+    }
+  },
+  "NonLocalMeansFilter": {
+    "library": "OpenCV",
+    "critical": true,
+    "intensity_mapping": {
+      "low":   { "h": 5, "templateWindowSize": 7, "searchWindowSize": 21 },
+      "medium":{ "h": 10, "templateWindowSize": 7, "searchWindowSize": 21 },
+      "strong":{ "h": 20, "templateWindowSize": 7, "searchWindowSize": 31 }
+    }
+  },
+  "SobelFilter": {
+    "library": "OpenCV",
+    "critical": false,
+    "intensity_mapping": {
+      "low":   { "ksize": 3 },
+      "medium":{ "ksize": 5 },
+      "strong":{ "ksize": 7 }
+    }
+  },
+  "UnsharpMaskingFilter": {
+    "library": "Custom (OpenCV + GaussianBlur)",
+    "critical": true,
+    "intensity_mapping": {
+      "low":   { "amount": 0.5, "radius": 1 },
+      "medium":{ "amount": 1.0, "radius": 2 },
+      "strong":{ "amount": 1.5, "radius": 3 }
+    }
+  },
+  "WaveletDenoise": {
+    "library": "PyWavelets",
+    "critical": true,
+    "intensity_mapping": {
+      "low":   { "wavelet": "db2", "level": 1, "threshold_scale": 0.5 },
+      "medium":{ "wavelet": "db4", "level": 2, "threshold_scale": 1.0 },
+      "strong":{ "wavelet": "db6", "level": 3, "threshold_scale": 1.5 }
+    }
+  }
+}

@@ -18,7 +18,7 @@ class TwoHeadClassifier(torch.nn.Module):
         return filter_logits, intensity_logits
 
 
-transformer_name = 'sentence-transformers/paraphrase-mpnet-base-v2'
+transformer_name = 'sentence-transformers/all-MiniLM-L6-v2'
 model_path = 'twohead_model.pt'
 filter_encoder_path = 'encoders/filter_encoder.pkl'
 intensity_encoder_path = 'encoders/intensity_encoder.pkl'

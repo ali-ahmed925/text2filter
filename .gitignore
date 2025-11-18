@@ -20,6 +20,7 @@ env/
 *.model
 *.cache
 *.index
+*.pkl
 
 # Logs and temporary files
 *.log
@@ -43,3 +44,12 @@ dataset.csv
 # OS generated files
 .DS_Store
 Thumbs.db
+
+#For Pypi
+build/
+dist/
+
+#models
+model/
+text2filter.egg-info/
+
