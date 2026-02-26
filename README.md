@@ -181,6 +181,6 @@ MIT License © Ali Ahmed
 
 ## Contact
 
-For questions or support, contact **Ali Ahmed** at `ali@example.com`.
+For questions or support, contact **Ali Ahmed** at `sayyidaliahmed1@gmail.com`.
 
 ```
